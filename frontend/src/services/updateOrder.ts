@@ -1,6 +1,6 @@
 import { api } from "./api"
 
-export const updateOrder = async (id: number, newStatus: string) => {
+export const updateOrder = async (id: string, newStatus: string) => {
   try{
     const response = await api.put(`/orders/${id}`, {
       state: newStatus,
